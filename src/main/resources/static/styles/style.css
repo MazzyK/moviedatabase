@@ -1,0 +1,56 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    color:black;
+}
+
+h1 {
+    font-family: sans-serif;
+    font-size: 1.5em;
+    color:red;
+    text-transform: uppercase;
+}
+
+
+table,th,td {
+  border: 1px solid;
+  word-wrap: break-word;
+  width:80%
+  border-collapse: collapse;
+}
+
+header{
+    color:black;
+    display:block;
+    height:100px;
+    width=100%;
+}
+
+.logsi {
+    float:right;
+    color:#000;
+}
+
+.nav {
+    background-color:black;
+    display:block;
+    color:white;
+    overflow: hidden;
+    float:left;
+    height:50px;
+    width:100%
+}
+
+.nav a {
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  color:#ff9900;
+}
+
+.logo {
+    float:left;
+    font-family: 'Aboreto', cursive;
+    color:#000;
+    font-size:2em;
+}

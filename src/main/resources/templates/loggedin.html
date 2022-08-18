@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Movie List</title>
+    <link th:href="@{/styles/style.css}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<header>
+    <div class="logo"> MovieRama</div>
+    <div class="logsi"><form th:action="@{/logout}" method="post">
+        <input type="submit" value="Logout" />
+    </form></div>
+</header>
+<body>
+<h3 th:inline="text">Welcome back [[${#httpServletRequest.remoteUser}]]</h3>
+<div class="nav">
+    Sort by:
+    <a href="#likes">Likes</a>|
+    <a href="#hates">Hates</a>|
+    <a href="#date">Date</a>
+</div>
+</br>
+
+<table class="w3-table-all">
+    <tr>
+
+        <th>Title</th>
+        <th>Description</th>
+        <th>Date Entered</th>
+        <th>Likes</th>
+        <th>Hates</th>
+    </tr>
+    <tr th:each="movie: ${movies}">
+        <td th:text="${movie.title}" />
+        <td th:text="${movie.description}" />
+        <td th:text="${movie.date}" />
+        <td th:text="${movie.likes}" />
+        <td th:text="${movie.hates}" />
+    </tr>
+</table>
+</body>
+</html>
+
+
